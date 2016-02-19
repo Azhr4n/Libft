@@ -25,14 +25,14 @@ static int	nb_of_digit(int n)
 	return (len);
 }
 
-static void	test(char **str, int len, int n)
+static void	recur(char **str, int len, int n)
 {
 	if ((n / 10) != 0)
 	{
 		if (n < 0)
-			test(str, len - 1, -(n / 10));
+			recur(str, len - 1, -(n / 10));
 		else
-			test(str, len - 1, n / 10);
+			recur(str, len - 1, n / 10);
 	}
 	n %= 10;
 	if (n < 0)
@@ -52,7 +52,7 @@ char		*ft_itoa(int n)
 	if (ret == NULL)
 		return (NULL);
 	ret[len] = 0;
-	test(&ret, len - 1, n);
+	recur(&ret, len - 1, n);
 	if (n < 0)
 		ret[0] = '-';
 	return (ret);
