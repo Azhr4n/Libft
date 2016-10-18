@@ -15,7 +15,7 @@
 
 #include "libft.h"
 
-static intmax_t	nb_of_digit(intmax_t n)
+static intmax_t		nb_of_digit(intmax_t n)
 {
 	intmax_t		len;
 

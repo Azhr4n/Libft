@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ltoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pivanovi <pivanovi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pivanovi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/19 13:00:24 by pivanovi          #+#    #+#             */
-/*   Updated: 2016/02/19 13:00:24 by pivanovi         ###   ########.fr       */
+/*   Created: 2016/10/18 15:23:22 by pivanovi          #+#    #+#             */
+/*   Updated: 2016/10/18 15:23:23 by pivanovi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static long int	nb_of_digit(long int n)
 	return (len);
 }
 
-static void	recur(char **str, long int len, long int n)
+static void		recur(char **str, long int len, long int n)
 {
 	if ((n / 10) != 0)
 	{
@@ -40,7 +40,7 @@ static void	recur(char **str, long int len, long int n)
 	(*str)[len] = '0' + (n % 10);
 }
 
-char		*ft_ltoa(long int n)
+char			*ft_ltoa(long int n)
 {
 	char		*ret;
 	long int	len;
